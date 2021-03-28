@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    scroll-snap-type: y mandatory;
 }
 
 .nav-bg-style:hover{
@@ -69,6 +70,9 @@ html, body {
 
         justify-content: center;
         align-items: center;
+        height: 100vh;
+        width: 100vw;
+        scroll-snap-align: start;
     }
 
     .hero>img{
@@ -96,7 +100,8 @@ html, body {
 
 
 #presentation{
-    background-image: url(./images/background1.jpg);
+    background-image: url(./images/background1.jpg) ;
+    background-position: 80% 0%;
     /* grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 10px;
@@ -113,6 +118,14 @@ html, body {
     align-self: flex-end;
 }
 
+
+#section4{
+    background-image: url(./images/background_landing.jpg);
+    background-position: 0% 0%;
+    background-size: 100%;
+
+}
+
 .section-structure{
     display: grid;
     height: 100vh;
@@ -126,6 +139,11 @@ html, body {
     ". . . . ."
     ". . . . ."
     ". . . . .";
+    
+    /* vertical scroll snap */
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
 }
 
 .section-title{
