@@ -6,23 +6,28 @@ html, body {
     scroll-behavior: smooth;
 }
 
-.nav-bg-style:hover{
-    opacity: 100%;
-}
+
 
 
 /* NAVBAR */
     .nav-bg-style{
-        opacity: 40%;
-        background-color: rgba(154, 167, 179, 0.692);
+        background-color: rgba(154, 167, 179, 0.6);
+        padding-bottom: 0;
+        margin-bottom: 0;
+
+    }
+
+    .nav-bg-style:hover{
+        /* background-color: rgba(154, 167, 179, 1); */
+        /* opacity: 100%; */
     }
 
     .sticky{
         position: fixed;
         top: 0;
         width: 100%;
-        height: 10vh;
-        border-bottom: 3px double rgb(187, 198, 247);
+        height: 9vh;
+        /* border-bottom: 3px double rgb(187, 198, 247); */
         z-index: 999;
     }
 
@@ -31,7 +36,9 @@ html, body {
         list-style: none;
         font-size: 0.7em;
         margin: 0;
-        align-items: center;
+        padding-bottom: 0;
+        align-items: flex-end;
+        height: 100%;
     }
 
     .logo{
@@ -47,19 +54,24 @@ html, body {
     .nav-btn{
         padding: 20px 20px;
         margin: 0px 10px;
-        border-radius: 10px;
+        border-radius: 10px 10px 0px 0px;
         text-transform: uppercase;
-        background-color: rgba(0, 0, 0, 0.15);
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: opacity(100%) blur(10px);
+        color: seashell;
+        border-bottom: 0px;
     }
 
-    a{
-        text-decoration: none;
-        color: seashell;
+    .nav-btn:hover{
+        /* background-color: rgba(236, 27, 27, 0.979); */
+        text-shadow: 2px 2px 1px black;
+        border: 2px inset rgba(154, 167, 179, 0.3);
     }
 
     .push{
         margin-left: auto;
     }
+
 
 .section-structure{
     display: grid;
@@ -80,10 +92,22 @@ html, body {
     width: 100vw;
     scroll-snap-align: start;
 }
-    
-/* LANDING PAGE */
 
-    .hero{
+.section-title{
+    border: 3px double rgba(91, 104, 126, 0.651);
+    background-color: rgba(0, 0, 0, 0.2);
+    grid-column: 2, -2;
+    grid-row: 1, 2;
+    grid-area: title;
+    text-align: center;
+    align-self: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+    
+/* HERO LANDING PAGE */
+
+    .hero-style{
         display: flex;
         height: 100vh;
         background:url(./images/background2.jpg) no-repeat fixed center;
@@ -114,8 +138,8 @@ html, body {
 
 
 
-#presentation{
-    background-image: url(./images/background1.jpg) ;
+#About{
+    background-image: url(./images/background1.jpg);
     background-position: 80% 0%;
     /* grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -127,7 +151,7 @@ html, body {
     ". . . . ."; */
 }
 
-#presentation.divider{
+#About.divider{
     grid-column: "2, span 3";
     grid-area: title;
     align-self: flex-end;
@@ -140,25 +164,12 @@ html, body {
     border-radius: 50%;
 }
 
-#section4{
-    background-image: url(./images/background_landing.jpg);
+#Reviews{
+    background-image: url(./images/background3.jpg);
     background-position: 0% 0%;
     background-size: 100%;
 
 }
-
-.section-title{
-    border: 3px double rgba(91, 104, 126, 0.651);
-    background-color: rgba(0, 0, 0, 0.2);
-    grid-column: 2, -2;
-    grid-row: 1, 2;
-    grid-area: title;
-    text-align: center;
-    align-self: center;
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-
 
 .buffer{
     height: 10vh;
