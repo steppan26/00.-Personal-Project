@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 .nav-bg-style:hover{
@@ -43,7 +44,7 @@ html, body {
         width: 100%;
     }
 
-    li{
+    .nav-btn{
         padding: 20px 20px;
         margin: 0px 10px;
         border-radius: 10px;
@@ -158,9 +159,6 @@ html, body {
     text-transform: uppercase;
 }
 
-.alt-color{
-    background-color: rgb(234, 179, 200);
-}
 
 .buffer{
     height: 10vh;
