@@ -1,0 +1,38 @@
+.navWrapper{
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-end;
+    background-color: var(--clr-primary);
+    position: absolute;
+    border: double 6px black;
+    overflow: hidden;
+}
+
+
+.navLogo{
+    box-sizing: border-box;
+    height: 5em;
+    width: 5em;
+    margin: 0.5em;
+    margin-right: auto;
+    align-self: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+img{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+}
+
+.navBtnsWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:flex-end;
+    width: 30vw;
+    height: 100%;
+}

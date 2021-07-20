@@ -1,3 +1,22 @@
+#lightTheme{
+  --clr-text-primary : rgba(0, 0, 0, 1);
+  --clr-text-secondary : rgba(255, 255, 255, 1);
+
+  --clr-primary: rgba(60, 85, 224, 0.993);
+  --clr-primary-accent : rgba(231, 164, 38, 1);
+  --clr-secondary : rgba(18, 31, 107, 0.753);
+}
+
+#darkTheme{
+  --clr-text-primary : rgba(194, 218, 235, 1);
+  --clr-text-secondary : rgba(8, 1, 19, 1);
+
+  --clr-primary : rgba(10, 26, 61, 1);
+  --clr-primary-accent : rgba(245, 220, 108, 1);
+  --clr-secondary : rgba(18, 31, 107, 0.753);
+
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
