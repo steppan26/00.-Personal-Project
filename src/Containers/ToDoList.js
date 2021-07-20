@@ -11,6 +11,15 @@ const ToDoList = () => {
     //         flexDirection: item ? "column" : "column",
     //     })
 
+    //Check if any list items exist and return true or false
+    const isEmpty = () => {
+        if (document.getElementsByClassName("listItem").length < 1){
+            return false
+        } else {
+            return true
+        }
+    }
+
         return(
             <div className="toDoList-wrapper">
                 <div className="toDoList-header">
@@ -21,12 +30,12 @@ const ToDoList = () => {
                     <button className="listItem-SubmitButton" >SUBMIT ITEM</button>
                 </div>
                 {
-                    3 > 1 ?
+                    isEmpty() ?
                     (
                         <div>No items are on your list</div>
                     )
                     :(
-                        <ListItems />
+                        <ListItems listLength={isEmpty}/>
                     )
                 }
             </div>

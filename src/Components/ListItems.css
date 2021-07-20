@@ -12,6 +12,7 @@
 }
 
 .listItem{
+    padding: 0.6em;
     cursor: pointer;
     width: 100%;
     border-top: 1px solid rgba(29, 32, 77, 0.459);
