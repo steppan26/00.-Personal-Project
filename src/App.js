@@ -17,7 +17,7 @@ const App = () => {
         config: {duration: 150},
     })
 
-  return (
+  return(
     <div className="App" id="lightTheme">
       <Navbar />
       <header>My web app</header>

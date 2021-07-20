@@ -1,11 +1,14 @@
 .navWrapper{
+    box-sizing:border-box;
     display: flex;
     justify-content:space-between;
     align-items: flex-end;
     background-color: var(--clr-primary);
     position: absolute;
     border: double 6px black;
-    overflow: hidden;
+    /* overflow: hidden; */
+    max-width: 100vw;
+    padding: 0 1em;
 }
 
 

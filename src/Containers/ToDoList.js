@@ -1,60 +1,36 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './ToDoList.css'
+import ListItems from '../Components/ListItems'
 
 
-class ToDoList extends Component {
-    constructor(){
-        super()
-        this.state={
-            showToDoList: true,
-            listItemsArray : [{content: "item1", value: false},{content: "item2", value: false},{content: "item3", value: false}, {content: "item4", value: false}]
-        }
-    }
-
-    componentDidMount(){
-        this.generateList()
-
-    }
-
-    onListClick = (index, item) => {
-        const newValues = [...this.state.listItemsArray]
-        newValues[index].value = item
-        this.setState({listItemsArray: newValues})
-
-    }
-
-    generateList(){
-        const list = document.getElementById("List")
-        for (const element in this.state.listItemsArray){
-            let listItem = document.createElement("li")
-            listItem.innerText = this.state.listItemsArray[element].content
-            list.appendChild(listItem)
-
-            listItem.addEventListener("click", () =>{
-                if (!this.state.listItemsArray[element].value){
-                    listItem.style.transform = "scale(1.2)"
-                } else {
-                    listItem.style.transform = "scale(1)"
-                }
-                let newStateValue = !this.state.listItemsArray[element].value
-                this.onListClick(element, newStateValue)
-            })
-        }
-    }
-
-    render(){
+const ToDoList = () => {
+    // const [item, activateItem ] = useState(true)
+    //     const listItemStyle = useSpring({
+    //         colour: item ? "black" : "white",
+    //         backgroundColor: item ? "#fff" : "black",
+    //         flexDirection: item ? "column" : "column",
+    //     })
 
         return(
             <div className="toDoList-wrapper">
                 <div className="toDoList-header">
                     <h3 className="toDoList-title">To Do List</h3>
                 </div>
-                <ul className="toDoList-content" id="List">
-
-                </ul>
+                <div className="useInput-section">
+                    <input type="text" id="userListInput" />
+                    <button className="listItem-SubmitButton" >SUBMIT ITEM</button>
+                </div>
+                {
+                    3 > 1 ?
+                    (
+                        <div>No items are on your list</div>
+                    )
+                    :(
+                        <ListItems />
+                    )
+                }
             </div>
         )
     }
-}
 
 export default ToDoList

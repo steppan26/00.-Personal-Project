@@ -3,25 +3,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 5em;
     border: 1px solid black;
     width: 20vw;
     text-align: center;
     background-color: rgba(236, 230, 208, 0.98);
-}
-#List{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow: hidden;
+    padding: 5em 0 2em 0;
 }
 
-#List>li{
-    cursor: pointer;
-    width: 100%;
-    border-top: 1px solid rgb(0, 0, 0);
-    border-bottom: 1px solid rgb(0, 0, 0);
-    box-shadow: 0 0 0.3em 0.1em rgba(37, 37, 37, 0.692);
-    background-image: linear-gradient(rgb(111,149,221)20%, rgb(149, 180, 236)80%, rgb(111,149,221) );
+.listItems-container{
+    width: 90%;
 }

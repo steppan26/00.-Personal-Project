@@ -1,0 +1,19 @@
+#List{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1em;
+}
+
+.listItem{
+    cursor: pointer;
+    width: 100%;
+    border-top: 1px solid rgba(29, 32, 77, 0.459);
+    background-image: linear-gradient(rgba(111, 150, 221, 0.76)0%, rgba(149, 179, 236, 0.089)35% 65%,rgba(111, 150, 221, 0.76));
+}
